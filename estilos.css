@@ -1,0 +1,389 @@
+/* =========================================================
+   FARMACIA CHÁVEZ
+   MAQUETACIÓN FLUIDA - PROGRAMACIÓN WEB
+   Sin JavaScript | Sin Flexbox | Sin Grid | Sin Media Queries
+   ========================================================= */
+
+
+/* =========================================================
+   MODELO DE CAJA
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DOCUMENTO
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #eef7fb;
+    color: #233746;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ELEMENTOS GENERALES
+   ========================================================= */
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p,
+dd,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+a {
+    color: #006fa6;
+}
+
+a:focus {
+    outline: 3px solid #70d4f5;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+header {
+    display: block;
+    width: min(100%, 75rem);
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5.5rem) 5%;
+    background: linear-gradient(135deg, #006fa6, #16a6d9);
+    color: white;
+    text-align: center;
+}
+
+header p:first-child {
+    margin: 0 0 0.8rem;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: bold;
+    letter-spacing: 0.12rem;
+}
+
+header h1 {
+    max-width: 18ch;
+    margin: 0 auto 1rem;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.1;
+}
+
+header p {
+    max-width: 65ch;
+    margin: 1rem auto;
+}
+
+header time {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+nav {
+    display: block;
+    width: min(100%, 75rem);
+    margin: 0 auto;
+    padding: 0.8rem 3%;
+    background-color: #034b70;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.55rem 0.9rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #16a6d9;
+    color: white;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+main {
+    display: block;
+    width: min(94%, 75rem);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+section {
+    display: block;
+    margin: clamp(1.5rem, 4vw, 3rem) 0;
+    padding: clamp(1.3rem, 3vw, 2.5rem);
+    background-color: white;
+    border: 1px solid #c5dfe9;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 82, 122, 0.08);
+}
+
+section > h2 {
+    margin-top: 0;
+    padding-bottom: 0.7rem;
+    border-bottom: 3px solid #16a6d9;
+    color: #034b70;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+
+/* =========================================================
+   PSEUDOELEMENTO DECORATIVO
+   ========================================================= */
+
+section > h2::before {
+    content: "✚ ";
+    color: #16a6d9;
+}
+
+section > h2::after {
+    content: "";
+    display: block;
+    width: min(8rem, 25vw);
+    height: 0.2rem;
+    margin-top: 0.5rem;
+    background-color: #70d4f5;
+}
+
+
+/* =========================================================
+   ARTÍCULOS
+   ========================================================= */
+
+article {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background-color: #f3faff;
+    border: 1px solid #c9e4ef;
+    border-left: 0.35rem solid #16a6d9;
+    border-radius: 0.5rem;
+}
+
+article h3 {
+    margin-top: 0;
+    color: #006fa6;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FIGURA E IMAGEN
+   ========================================================= */
+
+figure {
+    display: block;
+    width: min(100%, 60rem);
+    margin: 2rem auto 0;
+    padding: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 45rem;
+    height: auto;
+    margin: 0 auto;
+    border: 4px solid #d9f1fa;
+    border-radius: 0.8rem;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: #486879;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DESTACADA
+   ========================================================= */
+
+mark {
+    padding: 0.15rem 0.35rem;
+    background-color: #c9f0ff;
+    color: #034b70;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   DATOS
+   ========================================================= */
+
+data {
+    color: #006fa6;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   PREGUNTAS FRECUENTES
+   ========================================================= */
+
+details {
+    display: block;
+    margin: 0.8rem 0;
+    background-color: #f5fbfe;
+    border: 1px solid #b9dce9;
+    border-radius: 0.5rem;
+}
+
+summary {
+    position: relative;
+    padding: 1rem 3rem 1rem 1rem;
+    cursor: pointer;
+    color: #034b70;
+    font-weight: bold;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #009bd1;
+}
+
+details[open] {
+    background-color: #e8f7fc;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #b9dce9;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    margin: 0;
+    padding: 1rem;
+}
+
+
+/* =========================================================
+   LISTA DE DEFINICIONES
+   ========================================================= */
+
+dl {
+    margin: 0;
+}
+
+dt {
+    margin-top: 1rem;
+    color: #006fa6;
+    font-weight: bold;
+}
+
+dt:first-child {
+    margin-top: 0;
+}
+
+dd {
+    margin-left: clamp(1rem, 4vw, 3rem);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #d6e8ef;
+}
+
+
+/* =========================================================
+   ABREVIATURAS
+   ========================================================= */
+
+abbr {
+    color: #006fa6;
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+
+/* =========================================================
+   HORARIOS
+   ========================================================= */
+
+time {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    display: block;
+    width: min(100%, 75rem);
+    margin: 3rem auto 0;
+    padding: clamp(2rem, 5vw, 4rem) 5%;
+    background-color: #023b58;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    max-width: 65ch;
+    margin: 0.5rem auto;
+}
+
+footer p:first-child {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+
